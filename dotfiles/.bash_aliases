@@ -15,3 +15,4 @@ alias gl="git log --oneline --graph --decorate"
 alias ll="ls -lah --color=auto"
 alias ..="cd .."
 alias ...="cd ../.."
+alias mkd='mkdir -p'
