@@ -30,4 +30,4 @@ This repository contains my personal configuration files (dotfiles) for Unix-lik
 After installation, open a new terminal session to use the aliases and configurations.
 
 ## License
-MIT License. See `LICENSE` file for details.
+MIT License. See [License](LICENSE) file for details.
