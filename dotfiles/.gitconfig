@@ -1,0 +1,39 @@
+[user]
+  name = Your Name
+  email = your.email@example.com
+
+[core]
+  editor = vim
+  autocrlf = input
+
+[color]
+  ui = auto
+
+[alias]
+  st = status -sb
+  co = checkout
+  br = branch
+  cm = commit -m
+  ca = commit -am
+  df = diff
+  lg = log --oneline --graph --decorate --all
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  lastags = "!f() { \
+        for p in $(git tag | sed -E 's/([^.]+)\\..*/\\1/' | sort -u); do \
+            echo \"$p: $(git tag --list \"$p.*\" --sort=-version:refname | head -n1)\"; \
+        done; \
+    }; f"
+  addtag = "!f() { git tag -a \"$1\" -m \"$1\"; }; f"
+  aliases = "!git config --get-regexp ^alias"
+
+[pull]
+  rebase = true               # avoids automatic merges when pulling
+
+[push]
+  default = current           # only the current branch
+  autoSetupRemote = true      # automatically sets up upstream
+
+[credential]
+  helper = store
+
